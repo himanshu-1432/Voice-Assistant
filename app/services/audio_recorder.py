@@ -15,8 +15,6 @@ def record_audio(duration:int,output_path:str)->str:
         Path to saved audio files.
     """
 
-    print(f"Recording for {duration} seconds...")
-
     #Record Audio
     audio_data = sd.rec(
         int(duration*config.SAMPLE_RATE),
@@ -30,8 +28,6 @@ def record_audio(duration:int,output_path:str)->str:
 
     # Save to file
     sf.write(output_path,audio_path,config.SAMPLE_RATE)
-
-    print(f"Audio saved to {output_path}")
     return output_path
 
 
