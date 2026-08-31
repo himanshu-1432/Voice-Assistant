@@ -1,0 +1,25 @@
+# Core dependencies for Voice Agent MVP
+
+# LLM Integration
+openai>=1.0.0
+
+# Speech-to-Text (Whisper)
+openai-whisper>=20231117
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# Text-to-Speech
+pyttsx3>=2.90  # Offline TTS (cross-platform)
+# Alternative: gTTS for Google TTS
+
+# Audio handling
+soundfile>=0.12.1
+pyaudio>=0.2.13
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Future phases (uncomment when needed)
+# qdrant-client>=1.7.0  # Phase 4: RAG
+# langchain>=0.1.0       # Phase 4: RAG
+# webrtcvad>=2.0.10      # Phase 5: Voice Activity Detection
