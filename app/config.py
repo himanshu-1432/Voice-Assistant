@@ -12,6 +12,7 @@ class Config:
     
     # OpenAI settings
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY", "")
+    LLM_MODEL: str = os.getenv("LLM_MODEL", "gpt-4.1-mini")
     
     # Whisper settings
     USE_LOCAL_WHISPER: bool = os.getenv("USE_LOCAL_WHISPER", "false").lower() == "true"
