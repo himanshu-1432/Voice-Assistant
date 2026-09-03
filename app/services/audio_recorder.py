@@ -15,19 +15,19 @@ def record_audio(duration:int,output_path:str)->str:
         Path to saved audio files.
     """
 
-    #Record Audio
+    # Record Audio
     audio_data = sd.rec(
-        int(duration*config.SAMPLE_RATE),
-        sample_rate=config.SAMPLE_RATE,
+        int(duration * config.SAMPLE_RATE),
+        samplerate=config.SAMPLE_RATE,
         channels=config.CHANNELS,
         dtype="float32"
     )
 
-    # Wait for recrding to finish
+    # Wait for recording to finish
     sd.wait()
 
     # Save to file
-    sf.write(output_path,audio_path,config.SAMPLE_RATE)
+    sf.write(output_path, audio_data, config.SAMPLE_RATE)
     return output_path
 
 

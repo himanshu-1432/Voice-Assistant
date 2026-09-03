@@ -1,7 +1,7 @@
 """Whisper Speech-to-text service implementation"""
 
 from openai import OpenAI
-from app.services.stt_base import BaseSpeechToTextService, STTResponse
+from app.services.stt.stt_base import BaseSpeechToTextService, STTResponse
 from app.config import config
 
 
@@ -56,5 +56,7 @@ class WhisperService(BaseSpeechToTextService):
             model = self.model
         )
 
-    def create_stt_service(language:str="en")->WhisperService:
-        return WhisperService(language=language)    
+
+def create_stt_service(language: str = "en") -> BaseSpeechToTextService:
+    """Factory function to create a Speech-to-Text service instance."""
+    return WhisperService(language=language)    
